@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="1805.7971014492755" y="83.705357142857139"/>
         </scene>
-        <!--Next View Controller-->
+        <!--Prefectures View Controller-->
         <scene sceneID="Z7S-vL-uqS">
             <objects>
-                <viewController id="Fjb-XW-7QC" customClass="NextViewController" customModule="fumi_Kadai09" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Fjb-XW-7QC" customClass="PrefecturesViewController" customModule="fumi_Kadai09" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tkw-UC-Qk2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +74,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="東京都"/>
                                         <connections>
-                                            <segue destination="2KM-Rk-Xeh" kind="unwind" unwindAction="exitByTokyoWithSegue:" id="cut-NN-RmX"/>
+                                            <action selector="didTapTokyo:" destination="Fjb-XW-7QC" eventType="touchUpInside" id="Reg-NF-7My"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVV-ZR-9rD">
@@ -82,7 +82,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="神奈川県"/>
                                         <connections>
-                                            <segue destination="2KM-Rk-Xeh" kind="unwind" unwindAction="exitByKanagawaWithSegue:" id="O0K-LK-wdn"/>
+                                            <action selector="didTapKanagawa:" destination="Fjb-XW-7QC" eventType="touchUpInside" id="BuV-vH-Dzq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1f3-hV-jWj">
@@ -90,7 +90,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="埼玉県"/>
                                         <connections>
-                                            <segue destination="2KM-Rk-Xeh" kind="unwind" unwindAction="exitBySaitamaWithSegue:" id="Asr-KY-jLx"/>
+                                            <action selector="didTapSaitama:" destination="Fjb-XW-7QC" eventType="touchUpInside" id="OEg-JN-5Hh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSU-pb-NXs">
@@ -98,7 +98,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="千葉県"/>
                                         <connections>
-                                            <segue destination="2KM-Rk-Xeh" kind="unwind" unwindAction="exitByChibaWithSegue:" id="Jnl-7i-zmc"/>
+                                            <action selector="didTapChiba:" destination="Fjb-XW-7QC" eventType="touchUpInside" id="y9v-s9-cjJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -119,6 +119,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="2KM-Rk-Xeh" kind="unwind" identifier="exitSelect" unwindAction="exitSelectWithSegue:" id="Jdy-xo-o11"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D07-sT-dZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="2KM-Rk-Xeh" userLabel="Exit" sceneMemberID="exit"/>

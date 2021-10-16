@@ -8,7 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak private var label: UILabel!
 
+    @IBAction private func exitSelect(segue: UIStoryboardSegue) {
+        guard let prefecturesViewController = segue.source as? PrefecturesViewController else { return }
+        label.text = prefecturesViewController.selectedPrefectureName
+    }
+
+    @IBAction private func exitCancel(segue: UIStoryboardSegue) {
+    }
+}
+
+// 【問題点】他の画面からも都道府県選択画面を呼び出したい場合、
+// 提出時の作りだと都道府県名を呼び出す画面に毎回記述しなければならない
+class ViewController2: UIViewController {
     @IBOutlet weak private var label: UILabel!
 
     @IBAction private func exitByTokyo(segue: UIStoryboardSegue) {
