@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet weak private var label: UILabel!
 
     @IBAction private func exitByTokyo(segue: UIStoryboardSegue) {
